@@ -1,0 +1,110 @@
+@import '../../Assets/Style/variables.scss';
+@import '../../Assets/Style/mixins.scss';
+
+.products {
+  margin: $base_margintop * 2 auto 100px auto;
+  // display: grid;
+  // grid-template-columns: 1fr 2fr;
+  width: 45%;
+  h3 {
+    font-size: 3rem;
+    font-family: $lobster-font;
+    font-weight: 500;
+    color: $base-header-title-color;
+    text-align: center;
+  }
+  p {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(128, 128, 128, 0.466);
+  }
+}
+
+@include xs {
+  .products {
+    margin: $base_margintop * 2 0 100px 0;
+    // display: grid;
+    // grid-template-columns: 1fr 2fr;
+    width: 100%;
+
+    .product-list-page {
+      display: grid;
+      grid-template-columns: 1fr;
+      .filter-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        .filter {
+          text-align: center;
+        }
+      }
+      .product-list-container {
+        .bread-list {
+          grid-template-columns: 1fr;
+          .bread-container {
+            img {
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .products {
+    margin: $base_margintop * 2 0 100px 0;
+    // display: grid;
+    // grid-template-columns: 1fr 2fr;
+    width: 100%;
+
+    .product-list-page {
+      display: grid;
+      grid-template-columns: 1fr;
+      .filter-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        .filter {
+          text-align: center;
+        }
+      }
+      .product-list-container {
+        .bread-list {
+          grid-template-columns: 1fr;
+          .bread-container {
+            img {
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .products {
+    margin: $base_margintop * 2 0 100px 0;
+
+    width: 100%;
+
+    .product-list-page {
+      margin: 0 10%;
+      .filter-container {
+        margin: 0 auto;
+        .filter {
+          text-align: center;
+        }
+      }
+      .product-list-container {
+        margin-left: 5%;
+        .bread-list {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+}

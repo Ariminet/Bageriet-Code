@@ -1,0 +1,143 @@
+@import '../../Assets/Style/variables.scss';
+@import '../../Assets/Style/mixins.scss';
+.search-bar-container {
+  width: $search-bar-width;
+  position: relative;
+  padding-top: 50px;
+
+  .search-form {
+    @include pos-absolute(50%, 50%); // margin: 5px auto 0px auto;
+    width: 45%;
+    z-index: 100;
+    .search {
+      width: 100%;
+      padding: $search-bar-padding;
+      border: $search-bar-border;
+      cursor: pointer;
+      &:focus {
+        outline-width: 0;
+      }
+    }
+  }
+  .search-list-container {
+    position: absolute;
+    top: $search-bar-top-pos;
+    left: 50%;
+    z-index: 100;
+    width: 45%;
+    transform: translate(-50%, 0%);
+    background: $search-bar-base-bg;
+    li {
+      list-style: none;
+      width: 100%;
+      a {
+        font-size: 24px;
+        text-decoration: none;
+        color: $search-bar-base-color;
+        display: block;
+        padding: $search-bar-padding;
+        transition: $search-bar-hover-transition;
+        &:hover {
+          background: $search-bar-hover-bg;
+          color: $search-bar-hover-color;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .search-bar-container {
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+
+    .search-form {
+      @include pos-absolute(40%, 50%); // margin: 5px auto 0px auto;
+      width: 100%;
+      z-index: 100;
+      .search {
+        width: 100%;
+        padding: $search-bar-padding;
+        border: $search-bar-border;
+        cursor: pointer;
+        &:focus {
+          outline-width: 0;
+        }
+      }
+    }
+    .search-list-container {
+      position: absolute;
+      top: $search-bar-top-pos;
+      left: 50%;
+      z-index: 100;
+      width: 45%;
+      transform: translate(-50%, 0%);
+      background: $search-bar-base-bg;
+      li {
+        list-style: none;
+        width: 100%;
+        a {
+          font-size: 24px;
+          text-decoration: none;
+          color: $search-bar-base-color;
+          display: block;
+          padding: $search-bar-padding;
+          transition: $search-bar-hover-transition;
+          &:hover {
+            background: $search-bar-hover-bg;
+            color: $search-bar-hover-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .search-bar-container {
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+
+    .search-form {
+      @include pos-absolute(40%, 50%); // margin: 5px auto 0px auto;
+      width: 100%;
+      z-index: 100;
+      .search {
+        width: 100%;
+        padding: $search-bar-padding;
+        border: $search-bar-border;
+        cursor: pointer;
+        &:focus {
+          outline-width: 0;
+        }
+      }
+    }
+    .search-list-container {
+      position: absolute;
+      top: $search-bar-top-pos;
+      left: 50%;
+      z-index: 100;
+      width: 45%;
+      transform: translate(-50%, 0%);
+      background: $search-bar-base-bg;
+      li {
+        list-style: none;
+        width: 100%;
+        a {
+          font-size: 24px;
+          text-decoration: none;
+          color: $search-bar-base-color;
+          display: block;
+          padding: $search-bar-padding;
+          transition: $search-bar-hover-transition;
+          &:hover {
+            background: $search-bar-hover-bg;
+            color: $search-bar-hover-color;
+          }
+        }
+      }
+    }
+  }
+}

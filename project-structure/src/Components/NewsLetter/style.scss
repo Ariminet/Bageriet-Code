@@ -1,0 +1,252 @@
+@import '../../Assets/Style/variables.scss';
+@import '../../Assets/Style/mixins';
+.news-letter-container {
+  position: relative;
+
+  color: $base-news-letter-text-color;
+  img {
+    width: 100%;
+  }
+  .news-letter {
+    width: 100%;
+    @include pos-absolute(40%, 50%);
+    .news-letter-text-container {
+      width: 41%;
+      margin: $base-margin-center;
+      padding: 30px 0;
+      h3 {
+        font-family: $lobster-font;
+        font-size: $base-news-letter-title-size;
+        font-weight: $base-news-letter-title-weight;
+      }
+      p {
+        font-family: $open-sans-font;
+        font-size: $base-news-letter-title-size / 3;
+        color: lighten($base-news-letter-bg, 40%);
+      }
+    }
+    form {
+      height: $base-news-letter-form-height;
+      @include flex-center;
+      .fa-envelope {
+        @include flex-center;
+        padding: 0 15px;
+        background: lighten($base-news-letter-bg, 25%);
+        height: 100%;
+      }
+      input {
+        width: $base-news-letter-input-width;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+      }
+      button {
+        height: 100%;
+        background: $base-news-letter-bg;
+        padding: 0 35px;
+        border: none;
+        font-size: $base-news-letter-button-font-size;
+        letter-spacing: 0.1rem;
+        color: $base-news-letter-text-color;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+          background: darken($base-news-letter-bg, 10%);
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .news-letter-container {
+    img {
+      height: 200px;
+    }
+    .news-letter {
+      width: 100%;
+      @include pos-absolute(40%, 50%);
+      .news-letter-text-container {
+        width: 90%;
+        margin: $base-margin-center;
+        padding: 30px 0;
+        h3 {
+          font-size: $base-news-letter-title-size / 2;
+        }
+        p {
+          font-size: $base-news-letter-title-size / 3;
+        }
+      }
+      form {
+        .fa-envelope {
+        }
+        input {
+          width: $base-news-letter-input-width * 2;
+          height: 100%;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+        }
+        button {
+          height: 100%;
+          background: $base-news-letter-bg;
+          padding: 0 5px;
+          border: none;
+          font-size: $base-news-letter-button-font-size;
+          letter-spacing: 0.1rem;
+          color: $base-news-letter-text-color;
+          outline: none;
+          cursor: pointer;
+          &:hover {
+            background: darken($base-news-letter-bg, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .news-letter-container {
+    img {
+      height: 200px;
+    }
+    .news-letter {
+      width: 100%;
+      @include pos-absolute(40%, 50%);
+      .news-letter-text-container {
+        min-width: 80%;
+        margin: $base-margin-center;
+        padding: 30px 0;
+        h3 {
+          font-size: $base-news-letter-title-size / 2;
+        }
+        p {
+          font-size: $base-news-letter-title-size / 3;
+        }
+      }
+      form {
+        .fa-envelope {
+        }
+        input {
+          width: $base-news-letter-input-width * 2;
+          height: 100%;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+        }
+        button {
+          height: 100%;
+          background: $base-news-letter-bg;
+          padding: 0 5px;
+          border: none;
+          font-size: $base-news-letter-button-font-size;
+          letter-spacing: 0.1rem;
+          color: $base-news-letter-text-color;
+          outline: none;
+          cursor: pointer;
+          &:hover {
+            background: darken($base-news-letter-bg, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .news-letter-container {
+    img {
+      height: 200px;
+    }
+    .news-letter {
+      width: 100%;
+      @include pos-absolute(40%, 50%);
+      .news-letter-text-container {
+        min-width: 75%;
+        margin: $base-margin-center;
+        padding: 30px 0;
+        h3 {
+          font-size: $base-news-letter-title-size / 2;
+        }
+        p {
+          font-size: $base-news-letter-title-size / 3;
+        }
+      }
+      form {
+        .fa-envelope {
+        }
+        input {
+          width: $base-news-letter-input-width * 2;
+          height: 100%;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+        }
+        button {
+          height: 100%;
+          background: $base-news-letter-bg;
+          padding: 0 5px;
+          border: none;
+          font-size: $base-news-letter-button-font-size;
+          letter-spacing: 0.1rem;
+          color: $base-news-letter-text-color;
+          outline: none;
+          cursor: pointer;
+          &:hover {
+            background: darken($base-news-letter-bg, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  .news-letter-container {
+    img {
+      height: 200px;
+    }
+    .news-letter {
+      width: 100%;
+      @include pos-absolute(40%, 50%);
+      .news-letter-text-container {
+        min-width: 75%;
+        margin: $base-margin-center;
+        padding: 30px 0;
+        h3 {
+          font-size: $base-news-letter-title-size / 2;
+        }
+        p {
+          font-size: $base-news-letter-title-size / 3;
+        }
+      }
+      form {
+        .fa-envelope {
+        }
+        input {
+          width: $base-news-letter-input-width * 2;
+          height: 100%;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+        }
+        button {
+          height: 100%;
+          background: $base-news-letter-bg;
+          padding: 0 5px;
+          border: none;
+          font-size: $base-news-letter-button-font-size;
+          letter-spacing: 0.1rem;
+          color: $base-news-letter-text-color;
+          outline: none;
+          cursor: pointer;
+          &:hover {
+            background: darken($base-news-letter-bg, 10%);
+          }
+        }
+      }
+    }
+  }
+}

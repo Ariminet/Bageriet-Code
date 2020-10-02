@@ -1,0 +1,27 @@
+@import '../../Assets/Style/variables.scss';
+@import '../../Assets/Style/mixins.scss';
+.pagination-container {
+  margin-top: 15px;
+  .pagination {
+    color: gray;
+    display: flex;
+    button {
+      background: none;
+      border: 1px solid gray;
+      color: gray;
+      padding: 10px 15px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.1s ease-in;
+      &:hover {
+        background: #7195af;
+        border: 1px solid #7195af;
+        color: white;
+      }
+    }
+    .page-item {
+      list-style: none;
+      margin: 0 5px;
+    }
+  }
+}

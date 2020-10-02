@@ -1,0 +1,85 @@
+@import '../../../Assets/style/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.toolbar {
+  width: 100%;
+  position: fixed;
+  background: $base-bg;
+  height: $base-navbar-height;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .toolbar_navigation.noslider {
+    background: #7195af;
+    transition: 0.3s ease-in;
+  }
+  .toolbar_navigation {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+
+    .toolbar_logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 1rem;
+      a {
+        font-family: 'Lobster', cursive;
+        color: $base-logo-color;
+        text-decoration: none;
+        font-size: $base-logo-size;
+      }
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    .toolbar_navigation-items {
+      ul {
+        list-style: none;
+        display: flex;
+      }
+
+      li {
+        padding: 0 0.8rem;
+        &:nth-of-type(2) {
+          margin-right: 125px;
+        }
+        &:nth-of-type(3) {
+          margin-left: 125px;
+        }
+      }
+      .current {
+        color: white;
+      }
+      a {
+        color: $base-link-color;
+        text-decoration: none;
+        font-size: $base-link-fontsize;
+        &:hover,
+        &:active {
+          color: $base-link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar_navigation-items {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .toolbar_toggle-button {
+    display: none;
+  }
+  .toolbar_logo {
+    margin-left: 0;
+  }
+}

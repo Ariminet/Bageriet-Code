@@ -1,0 +1,113 @@
+@import '../../../Assets/Style/variables.scss';
+@import '../../../Assets/Style/mixins.scss';
+
+.create-container {
+  margin-top: $base_margintop;
+  .create-form {
+    padding: 5% 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 30%;
+    margin: $base-margin-center;
+    grid-gap: 15px;
+    input {
+      border: 1px solid rgb(182, 182, 182);
+      outline: none;
+      padding: 15px 0 15px 15px;
+    }
+    a {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      background: #7195af;
+      border: 1px solid #7195af;
+      outline: none;
+      margin-left: auto;
+      padding: 11px 0 10px 0;
+      color: white;
+      transition: 0.1s ease-in;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: $open-sans-font;
+      &:hover {
+        background: lighten(#7195af, 25%);
+        color: #7195af;
+        border: 1px solid #7195af;
+      }
+    }
+    button {
+      width: 100%;
+      background: #7195af;
+      border: 1px solid #7195af;
+      outline: none;
+      margin-left: auto;
+      padding: 10px 0;
+      color: white;
+      transition: 0.1s ease-in;
+      &:hover {
+        background: lighten(#7195af, 25%);
+        color: #7195af;
+        border: 1px solid #7195af;
+      }
+    }
+  }
+}
+@include xs {
+  .create-container {
+    .create-form {
+      width: 30%;
+
+      a {
+        width: 25%;
+      }
+      button {
+        width: 25%;
+      }
+    }
+  }
+}
+@include xs {
+  .create-container {
+    .create-form {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include sm {
+  .create-container {
+    .create-form {
+      width: 70%;
+
+      button {
+        width: 100%;
+      }
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include md {
+  .create-container {
+    .create-form {
+      width: 50%;
+
+      button {
+        width: 100%;
+      }
+      a {
+        width: 100%;
+      }
+    }
+  }
+}

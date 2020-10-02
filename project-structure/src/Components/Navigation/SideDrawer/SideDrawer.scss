@@ -1,0 +1,47 @@
+@import '../../../Assets/style/variables.scss';
+
+.side-drawer {
+  height: 100%;
+  background: $base-drawer-bg;
+  box-shadow: $base-box-shadow;
+  position: fixed;
+  top: $base_margintop;
+  left: 0;
+  width: $base-drawer-width;
+  max-width: $base-drawer-max-width;
+  z-index: 200;
+  transform: $base-drawer-out;
+  transition: $base-drawer-transform;
+
+  ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+  li {
+    margin: $base-link-margin;
+  }
+  a {
+    color: $base-drawer-link-color;
+    font-size: $base-link-fontsize;
+    text-decoration: none;
+    &:hover,
+    &:active {
+      color: $base-drawer-link-hover-color;
+    }
+  }
+  a.current {
+    text-decoration: underline;
+  }
+}
+.side-drawer.open {
+  transform: $base-drawer-in;
+}
+
+@media (min-width: 769px) {
+  .side-drawer {
+    display: none;
+  }
+}

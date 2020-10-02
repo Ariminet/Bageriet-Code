@@ -1,0 +1,118 @@
+@import '../../../../Assets/Style/mixins.scss';
+@import '../../../../Assets/Style/variables.scss';
+.manage-products-container {
+  margin: $base-margintop * 2 auto 10% auto;
+  @include grid-cols(1, 1fr);
+  @include grid-rows(1fr);
+  width: 55%;
+  a {
+    background: #7195af;
+    border: 1px solid #7195af;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    &:hover {
+      background: darken(#7195af, 15%);
+    }
+  }
+
+  thead {
+    tr {
+      @include grid-cols(7, 1fr);
+      text-align: center;
+      font-size: 18px;
+      padding: 15px 0;
+      td {
+        border: 1px solid gray;
+      }
+    }
+  }
+  tbody {
+    tr {
+      @include grid-cols(7, 1fr);
+      text-align: center;
+      margin: 15px 0;
+      td {
+        border: 1px solid gray;
+        padding: 0 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        &:last-of-type {
+          border: none;
+          padding: 0;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 5px 0px;
+        }
+        button,
+        a {
+          background: #7195af;
+          border: 1px solid #7195af;
+          color: white;
+          padding: 10px;
+          font-size: 16px;
+          cursor: pointer;
+          outline: none;
+          &:hover {
+            background: darken(#7195af, 15%);
+          }
+        }
+        a {
+          font-size: 14px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .manage-products-container {
+    margin: $base-margintop * 2 0 10% 0;
+    @include grid-cols(1, 1fr);
+    width: 100%;
+    a {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+}
+
+@include sm {
+  .manage-products-container {
+    margin: $base-margintop * 2 0 10% 0;
+    @include grid-cols(1, 1fr);
+    width: 100%;
+    a {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+}
+@include md {
+  .manage-products-container {
+    margin: $base-margintop * 2 0 10% 0;
+    @include grid-cols(1, 1fr);
+    width: 100%;
+    a {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+}
+@include lg {
+  .manage-products-container {
+    margin: $base-margintop * 2 0 10% 0;
+    @include grid-cols(1, 1fr);
+    width: 100%;
+    a {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+}

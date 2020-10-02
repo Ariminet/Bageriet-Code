@@ -1,0 +1,14 @@
+@import '../../../Assets/Style/variables.scss';
+@import '../../../Assets/Style/mixins.scss';
+
+.Confirmed-letter {
+  height: 100vh;
+  position: relative;
+  h2 {
+    @include pos-absolute(50%, 50%) font-family: $lobster-font;
+    font-weight: 400;
+    color: #7195af;
+    text-align: center;
+    font-size: 32px;
+  }
+}

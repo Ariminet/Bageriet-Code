@@ -1,0 +1,32 @@
+@import './Assets/Style/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./Assets/Fonts/open-sans/OpenSans-Bold.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-BoldItalic.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-ExtraBold.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-ExtraBoldItalic.ttf')
+    format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-Italic.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-Light.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-LightItalic.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-Regular.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-Semibold.ttf') format('ttf');
+  src: url('./Assets/Fonts/open-sans/OpenSans-SemiboldItalic.ttf') format('ttf');
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.App {
+  // margin-top: $base_margintop;
+}
+html {
+  font-size: 62.5%;
+  // background: #fbfbfb;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}

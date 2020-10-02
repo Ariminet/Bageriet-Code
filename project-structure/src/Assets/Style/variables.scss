@@ -1,0 +1,130 @@
+// App Global Variables
+$base_margintop: 100px;
+$base-margin-center: 0 auto;
+$base-header-title-color: darken(#7195af, 35%);
+$lobster-font: 'Lobster', cursive;
+$open-sans-font: 'Open-Sans', sans-serif;
+
+// Media Query Global Variables
+
+// phone and very small tables
+$screen-xs-min: 280px;
+$screen-xs-max: 575px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+$screen-sm-max: 767px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+$screen-md-max: 991px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+$screen-lg-max: 1199px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Media Query Global Variables
+
+// Navigation Global Variables
+$base-navbar-height: $base_margintop;
+$base-bg: rgba(60, 60, 184, 0);
+$base-logo-size: 5rem;
+$base-link-color: rgba(255, 255, 255, 0.5);
+$base-link-color-active: rgba(255, 255, 255, 1);
+$base-link-hover-color: white;
+$base-logo-color: white;
+//
+
+// Side Drawer Global Varibales
+$base-drawer-width: 70%;
+$base-drawer-max-width: 400px;
+$base-drawer-bg: #7195af;
+$base-drawer-link-color: white;
+$base-drawer-link-hover-color: lighten($base-drawer-link-color, 15%);
+$base-link-fontsize: 1.2rem;
+$base-link-margin: 1rem 1.5rem;
+$base-box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+$base-drawer-out: translateX(-115%);
+$base-drawer-in: translateX(0%);
+$base-drawer-transform: transform 0.3s ease-out;
+// Side Drawer Global Varibales
+
+// Drawer Button Global Variables
+$base-margin-left: 15px;
+$base-burger-height: 3rem;
+$base-burger-width: 30px;
+$base-burger-line-width: $base-burger-width;
+$base-burger-line-width-while-rotated: 36px;
+$base-burger-line-height: 2px;
+$base-burger-line-color: white;
+$base-burger-transform: $base-drawer-transform;
+$base-burger-unclicked-rotation: rotate(0deg);
+$base-burger-clicked-rotation-first: rotate(40deg);
+$base-burger-clicked-rotation-second: rotate(-40deg);
+// Drawer Button Global Variables
+
+// Backdrop Global Variables
+$base-backdrop-bg: rgba(0, 0, 0, 0.3);
+// Backdrop Global Variables
+
+// Navigation Global Variables
+
+// Footer Global Variables
+
+$base-bg-color: rgb(42, 42, 42);
+$base-info-height: 135px;
+$base-icon-size: 1.8rem;
+$base-footer-title-size: 3rem;
+$base-footer-title-color: white;
+$base-footer-text-size: 1.1rem;
+$base-light-font-weight: 300;
+$base-text-padding: 15px;
+$base-info-width: 45%;
+$base-info-margin: 0 auto;
+
+// Footer Global Variables
+
+// Latest News Global Variables
+
+$base-news-text-color: $base-bg-color;
+$base-news-container-padding: 10% 0;
+$base-news-padding-bottom: 5%;
+$base-news-line-height: 2;
+$base-main-news-title-font-size: 3rem;
+$base-under-news-title-font-size: 1.4rem;
+$base-news-text-font-size: 1.2rem;
+$base-news-img-height: 160px;
+$base-news-img-radius: 50%;
+$base-news-containers-width: 45%;
+
+// Latest News Global Variables
+
+// News Letter Global Variables
+
+$base-news-letter-title-size: 4rem;
+$base-news-letter-title-weight: 400;
+$base-news-letter-form-height: 35px;
+$base-news-letter-input-width: 33%;
+$base-news-letter-bg: rgb(99, 128, 144);
+$base-news-letter-text-color: white;
+$base-news-letter-button-font-size: 1rem;
+
+// News Letter Global Variables
+
+// Eight New Breads Global Variables
+
+$base-bread-padding: 5% 0;
+$base-bread-title-color: rgb(99, 128, 144);
+$base-bread-text-color: gray;
+
+// Search Bar Global Variables
+$search-bar-width: 100%;
+$search-bar-padding: 10px;
+$search-bar-border: 1px solid #7195af;
+$search-bar-base-color: white;
+$search-bar-hover-color: #7195af;
+$search-bar-base-bg: #7195af;
+$search-bar-hover-bg: white;
+$search-bar-hover-transition: 0.1s ease-in;
+$search-bar-top-pos: 100%;

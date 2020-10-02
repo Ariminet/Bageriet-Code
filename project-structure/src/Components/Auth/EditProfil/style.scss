@@ -1,0 +1,56 @@
+@import '../../../Assets/Style/variables.scss';
+@import '../../../Assets/Style/mixins.scss';
+
+.edit-container {
+  margin: $base-margintop auto 0 auto;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30%;
+  grid-gap: 5px;
+  label {
+    font-size: 18px;
+  }
+  input {
+    background: none;
+    outline: none;
+    border: 1px solid gray;
+    padding: 15px 0 15px 15px;
+  }
+  button {
+    background: #7195af;
+    border: 1px solid #7195af;
+    color: white;
+    padding: 15px 0;
+    transition: 0.1s ease-in;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background: rgb(5, 77, 5);
+      border: 1px solid lighten(rgb(5, 77, 5), 15%);
+    }
+  }
+}
+
+@include xs {
+  .edit-container {
+    width: 100%;
+  }
+}
+
+@include sm {
+  .edit-container {
+    width: 80%;
+  }
+}
+
+@include md {
+  .edit-container {
+    width: 70%;
+  }
+}
+@include lg {
+  .edit-container {
+    width: 55%;
+  }
+}

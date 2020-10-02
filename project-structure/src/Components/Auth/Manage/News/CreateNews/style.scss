@@ -1,0 +1,44 @@
+@import '../../../../../Assets/Style/variables.scss';
+@import '../../../../../Assets/Style/mixins.scss';
+
+.create-news-form {
+  margin: $base-margintop * 2 auto 200px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 45%;
+  grid-gap: 5px;
+  input {
+    padding: 15px;
+    outline: none;
+  }
+  textarea {
+    padding: 15px;
+    outline: none;
+  }
+  button {
+    background: #7195af;
+    border: 1px solid #7195af;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    &:hover {
+      background: darken(#7195af, 15%);
+    }
+  }
+}
+
+@include xs {
+  .create-news-form {
+    width: 100%;
+  }
+}
+@include sm {
+  .create-news-form {
+    width: 70%;
+  }
+}
+@include md {
+  .create-news-form {
+    width: 50%;
+  }
+}

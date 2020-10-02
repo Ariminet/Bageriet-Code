@@ -1,0 +1,54 @@
+@import '../../../Assets/style/variables.scss';
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: $base-burger-height;
+  width: $base-burger-width;
+  background: transparent;
+  border: none;
+  margin-left: $base-margin-left;
+  &:focus {
+    outline: none;
+  }
+  cursor: pointer;
+  .toggle-button:focus {
+    outline: none;
+  }
+
+  .toggle-button_line {
+    width: $base-burger-line-width;
+    height: $base-burger-line-height;
+    background: $base-burger-line-color;
+    transition: $base-burger-transform;
+    &:nth-of-type(1) {
+      transform: $base-burger-unclicked-rotation;
+    }
+    &:nth-of-type(3) {
+      transform: $base-burger-unclicked-rotation;
+    }
+  }
+}
+
+.open {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  .open {
+    position: absolute;
+    width: $base-burger-line-width-while-rotated;
+    top: 45%;
+    left: -9%;
+    transform: translate3d(-50%, -50%);
+    &:nth-of-type(1) {
+      transform: $base-burger-clicked-rotation-first;
+    }
+    &:nth-of-type(3) {
+      transform: $base-burger-clicked-rotation-second;
+    }
+    &:nth-of-type(2) {
+      display: none;
+    }
+  }
+}

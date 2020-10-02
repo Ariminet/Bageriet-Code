@@ -1,0 +1,130 @@
+@import '../../../Assets/Style/variables.scss';
+@import '../../../Assets/Style/mixins.scss';
+
+.admin-nav {
+  margin-top: $base-margintop * 2;
+  .link-container {
+    width: 60%;
+    margin: 10% auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+    .link-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 25px;
+      a {
+        text-align: center;
+        display: block;
+        padding: 100px 50px;
+        background: #7195af;
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+        border: 1px solid #7195af;
+        &:hover {
+          background: lighten(#7195af, 25%);
+          border: 1px solid gray;
+        }
+      }
+    }
+    button {
+      background: #7195af;
+      border: 1px solid #7195af;
+      padding: 15px 0;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      outline: none;
+      &:hover {
+        background: firebrick;
+        border: 1px solid firebrick;
+      }
+    }
+  }
+}
+
+@include xs {
+  .admin-nav {
+    margin-top: $base-margintop * 1.5;
+    .link-container {
+      width: 100%;
+
+      .link-items {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        a {
+          padding: 50px 50px;
+        }
+      }
+    }
+  }
+}
+@include sm {
+  .admin-nav {
+    margin-top: $base-margintop * 1.5;
+    .link-container {
+      width: 100%;
+
+      .link-items {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        a {
+          padding: 35px 5px;
+          font-size: 16px;
+        }
+      }
+      button {
+        padding: 10px 0;
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include md {
+  .admin-nav {
+    margin-top: $base-margintop * 1.7;
+    .link-container {
+      width: 100%;
+
+      .link-items {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        a {
+          padding: 50px 5px;
+          font-size: 16px;
+        }
+      }
+      button {
+        padding: 25px 0;
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include lg {
+  .admin-nav {
+    margin-top: $base-margintop * 1.7;
+    .link-container {
+      width: 100%;
+
+      .link-items {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        a {
+          padding: 50px 5px;
+          font-size: 16px;
+        }
+      }
+      button {
+        padding: 25px 0;
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+}

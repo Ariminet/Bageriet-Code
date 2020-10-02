@@ -1,0 +1,60 @@
+@import '../../../../../Assets/Style/variables.scss';
+@import '../../../../../Assets/Style/mixins.scss';
+.edit-news-container {
+  margin: $base-margintop * 2 auto $base-margintop auto;
+  width: 45%;
+  .news-img-container {
+    height: 450px;
+    min-height: 200px;
+    min-width: 200px;
+    margin: 5px auto;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .edit-news-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    input {
+      padding: 15px;
+      outline: none;
+    }
+    textarea {
+      padding: 15px;
+      outline: none;
+    }
+    button {
+      background: #7195af;
+      border: 1px solid #7195af;
+      color: white;
+      padding: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        background: darken(#7195af, 15%);
+      }
+    }
+  }
+}
+
+@include xs {
+  .edit-news-container {
+    margin: $base-margintop * 2 auto $base-margintop auto;
+    width: 90%;
+    .news-img-container {
+      min-height: 200px;
+      min-width: 200px;
+      margin: 0 auto;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .edit-news-form {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../Assets/Style/variables.scss';
+@import '../../Assets/Style/mixins.scss';
+
+.navigation {
+  .toolbar {
+    .navBG {
+      background: $base-drawer-bg;
+    }
+  }
+}

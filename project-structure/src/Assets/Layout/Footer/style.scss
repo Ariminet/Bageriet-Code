@@ -1,0 +1,148 @@
+@import '../../Style/variables.scss';
+@import '../../Style/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+footer {
+  background: $base-bg-color;
+  position: relative;
+
+  .fa-less-than {
+    @include pos-absolute(0%, 50%);
+    transform: rotate(90deg);
+    background: lighten($base-bg-color, 50%);
+    padding: 8px;
+    border-radius: 50%;
+    transform-origin: top;
+    font-size: $base-icon-size;
+    color: lighten($base-bg-color, 5%);
+  }
+  .info {
+    width: $base-info-width;
+    margin: $base-info-margin;
+    height: $base-info-height;
+    text-align: center;
+    position: relative;
+    .info-text {
+      @include pos-absolute(50%, 50%);
+      h2 {
+        font-family: 'Lobster', cursive;
+        font-weight: $base-light-font-weight;
+        color: $base-footer-title-color;
+        font-size: $base-footer-title-size;
+      }
+      p {
+        padding-top: $base-text-padding;
+        color: lighten($base-bg-color, 20%);
+        font-size: $base-footer-text-size;
+      }
+    }
+  }
+  .copy-right {
+    background: darken($base-bg-color, 5%);
+    height: $base-info-height / 3;
+    position: relative;
+    p {
+      font-size: $base-footer-text-size;
+      @include pos-absolute(50%, 50%);
+      color: lighten($base-bg-color, 20%);
+    }
+  }
+}
+
+@include xs {
+  footer {
+    .info {
+      width: 100%;
+
+      .info-text {
+        width: 100%;
+        h2 {
+          font-size: $base-footer-title-size * 1.2;
+        }
+        p {
+          padding-top: 0;
+          font-size: $base-footer-text-size * 1.2;
+        }
+      }
+    }
+    .copy-right {
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include sm {
+  footer {
+    .info {
+      width: 100%;
+
+      .info-text {
+        width: 90%;
+        h2 {
+          font-size: $base-footer-title-size * 1.2;
+        }
+        p {
+          padding-top: 0;
+          font-size: $base-footer-text-size * 1.2;
+        }
+      }
+    }
+    .copy-right {
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include md {
+  footer {
+    .info {
+      width: 100%;
+
+      .info-text {
+        width: 90%;
+        h2 {
+          font-size: $base-footer-title-size * 1.2;
+        }
+        p {
+          padding-top: 0;
+          font-size: $base-footer-text-size * 1.2;
+        }
+      }
+    }
+    .copy-right {
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+@include lg {
+  footer {
+    .info {
+      width: 100%;
+
+      .info-text {
+        width: 90%;
+        h2 {
+          font-size: $base-footer-title-size * 1.2;
+        }
+        p {
+          padding-top: 0;
+          font-size: $base-footer-text-size * 1.2;
+        }
+      }
+    }
+    .copy-right {
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

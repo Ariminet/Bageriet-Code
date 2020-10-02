@@ -1,0 +1,433 @@
+@import '../../../Assets/Style/variables.scss';
+@import '../../../Assets/Style/mixins.scss';
+
+.bread-detail-page {
+  font-family: $open-sans-font;
+  margin: $base-margintop * 2 15% $base-margintop 15%;
+  padding-top: 10px;
+
+  .breadcrumbs {
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 25px;
+
+    a {
+      text-decoration: none;
+      color: gray;
+      font-size: 12px;
+      &:hover {
+        color: black;
+      }
+
+      &:nth-of-type(1) {
+        &:after {
+          padding: 0 5px;
+          content: '\003E';
+        }
+      }
+      &:nth-of-type(2) {
+        color: black;
+      }
+    }
+  }
+  .bread-detail-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.5fr 5fr;
+    grid-template-areas:
+      'left-top like'
+      'left-top recipe';
+    grid-gap: 25px;
+    .bread-left {
+      grid-area: left-top;
+
+      .bread-header {
+        h2 {
+          font-size: 24px;
+          color: rgb(49, 49, 49);
+          font-family: $open-sans-font;
+          text-transform: uppercase;
+        }
+        h3 {
+          font-size: 18px;
+          font-weight: 400;
+          color: gray;
+          padding-bottom: 15px;
+          font-family: $open-sans-font;
+          text-transform: uppercase;
+        }
+      }
+      .bread-detail {
+        img {
+          float: left;
+          height: 150px;
+          width: 200px;
+
+          display: inline-block;
+        }
+        p {
+          font-size: 14px;
+          font-family: $open-sans-font;
+          color: gray;
+        }
+      }
+    }
+    button {
+      background: none;
+      outline: none;
+      border: 1px solid gray;
+      color: gray;
+      margin-left: auto;
+      height: 35px;
+      width: 155px;
+      cursor: pointer;
+      &:hover {
+        background: gray;
+        color: white;
+        a {
+          color: white;
+        }
+        .fa-heart {
+          color: white;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      .fa-heart {
+        padding-left: 5px;
+        color: red;
+      }
+    }
+    .recipe-list {
+      h4 {
+        color: rgb(59, 59, 59);
+        font-size: 16px;
+        letter-spacing: 0.7px;
+      }
+      ul {
+        li {
+          background: white;
+          margin-bottom: 2px;
+          text-align: center;
+          list-style: none;
+          padding: 15px;
+          border: 1px solid gray;
+          color: gray;
+        }
+      }
+    }
+  }
+  .comment-container {
+    margin: 100px 0 50px 0;
+    .comment-header {
+      display: flex;
+      border: 1px solid gray;
+      padding: 5px 15px;
+      h5 {
+        font-size: 18px;
+        color: rgb(47, 47, 47);
+      }
+      .spacer {
+        flex: 1;
+      }
+      .amount-of-comments {
+        color: gray;
+        padding: 5px 0;
+        letter-spacing: 3px;
+        .fa-comments {
+        }
+      }
+    }
+    .login-input-container {
+      margin: 5px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      border: 1px solid gray;
+      text-align: center;
+      padding: 10px 0;
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+      &:hover {
+        background: gray;
+        a {
+          color: white;
+        }
+      }
+    }
+    .input-comment-container {
+      margin: 5px 0;
+      display: grid;
+      grid-template-columns: 9fr 1.3fr;
+
+      .input-container {
+        border: 1px solid gray;
+        display: grid;
+        grid-template-columns: 0.6fr 9fr;
+        .fa-pencil-alt {
+          text-align: center;
+          padding: 15px 0;
+          font-size: 14px;
+        }
+        input {
+          padding: 12px 0;
+          background: none;
+          border: none;
+          outline: none;
+        }
+      }
+      button {
+        background: #4a6274;
+        border: none;
+        margin-left: 2px;
+        outline: none;
+        color: white;
+        letter-spacing: 1px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: 0.1s ease-in;
+        &:hover {
+          background: lighten(#4a6274, 15%);
+        }
+      }
+    }
+    .comment-post {
+      margin: 1px 0;
+      border: 1px solid gray;
+      padding: 50px 100px;
+      h3 {
+        font-size: 18px;
+        color: rgb(26, 26, 26);
+      }
+      .time-stamp {
+        font-size: 12px;
+        color: gray;
+      }
+      .comment-text {
+        font-size: 16px;
+        color: gray;
+      }
+      .buttons {
+        background: none;
+        border: 1px solid gray;
+        padding: 5px 10px;
+        margin-top: 15px;
+        outline: none;
+
+        &:hover {
+          background: green;
+          color: white;
+          border: 1px solid green;
+        }
+      }
+      .buttons.delete {
+        &:hover {
+          background: firebrick;
+          border: 1px solid firebrick;
+        }
+      }
+      .edit-comment-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        .edit-input-field {
+        }
+        .buttons {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+@include xs {
+  .bread-detail-page {
+    margin: $base-margintop * 2 0 $base-margintop;
+
+    .breadcrumbs {
+      border: 1px solid gray;
+      padding: 10px;
+      margin-bottom: 25px;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        color: gray;
+        font-size: 12px;
+        &:hover {
+          color: black;
+        }
+
+        &:nth-of-type(1) {
+          &:after {
+            padding: 0 5px;
+            content: '\003E';
+          }
+        }
+        &:nth-of-type(2) {
+          color: black;
+        }
+      }
+    }
+    .bread-detail-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 5.5fr 3.5fr 0.5fr;
+      grid-template-areas:
+        'left-top left-top'
+        'recipe recipe'
+        'like like';
+      grid-gap: 25px;
+      .bread-left {
+        .bread-header {
+        }
+        .bread-detail {
+          img {
+            float: none;
+            height: 300px;
+            width: 100%;
+
+            display: inline;
+          }
+          p {
+            padding: 0 5%;
+          }
+        }
+      }
+      button {
+        grid-area: like;
+        background: none;
+        outline: none;
+        border: 1px solid gray;
+        color: gray;
+        margin: 0 auto;
+        height: 75px;
+        width: 100%;
+        cursor: pointer;
+        &:hover {
+          background: gray;
+          color: white;
+          a {
+            color: white;
+          }
+          .fa-heart {
+            color: white;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: gray;
+        }
+
+        .fa-heart {
+          padding-left: 5px;
+          color: red;
+        }
+      }
+      .recipe-list {
+        grid-area: recipe;
+        h4 {
+          color: rgb(59, 59, 59);
+          font-size: 16px;
+          letter-spacing: 0.7px;
+        }
+        ul {
+          li {
+            background: white;
+            margin-bottom: 2px;
+            text-align: center;
+            list-style: none;
+            padding: 15px;
+            border: 1px solid gray;
+            color: gray;
+          }
+        }
+      }
+    }
+    .comment-container {
+      margin: 100px 0 50px 0;
+      .comment-header {
+        display: flex;
+        border: 1px solid gray;
+        padding: 5px 15px;
+        h5 {
+          font-size: 18px;
+          color: rgb(47, 47, 47);
+        }
+        .spacer {
+          flex: 1;
+        }
+        .amount-of-comments {
+          color: gray;
+          padding: 5px 0;
+          letter-spacing: 3px;
+          .fa-comments {
+          }
+        }
+      }
+      .login-input-container {
+        margin: 5px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        border: 1px solid gray;
+        text-align: center;
+        padding: 10px 0;
+        a {
+          text-decoration: none;
+          color: gray;
+        }
+        &:hover {
+          background: gray;
+          a {
+            color: white;
+          }
+        }
+      }
+      .input-comment-container {
+        grid-template-columns: 1fr;
+
+        .input-container {
+          grid-template-columns: 1.5fr 9fr;
+        }
+        button {
+          padding: 15px;
+        }
+      }
+      .comment-post {
+        padding: 50px 15px;
+        h3 {
+          font-size: 18px;
+          color: rgb(26, 26, 26);
+        }
+        .time-stamp {
+          font-size: 12px;
+          color: gray;
+        }
+        .comment-text {
+          font-size: 16px;
+          color: gray;
+        }
+        button {
+          background: none;
+          border: 1px solid gray;
+          padding: 5px 10px;
+          margin-top: 15px;
+          &:hover {
+            background: firebrick;
+            color: white;
+            border: 1px solid firebrick;
+          }
+        }
+      }
+    }
+  }
+}
