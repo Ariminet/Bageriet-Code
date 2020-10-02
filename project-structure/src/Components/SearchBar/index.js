@@ -5,6 +5,7 @@ import './style.scss';
 const SearchBar = () => {
   const [search, setSearch] = useState('');
   const [list, setList] = useState([]);
+
   useEffect(() => {
     API.getItems('/produkter', setList);
   }, []);

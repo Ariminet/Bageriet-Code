@@ -55,6 +55,7 @@ const ProductDetail = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(3);
   let currentComments = [];
+
   if (kommentar) {
     showComments = kommentar;
 

@@ -11,7 +11,7 @@ const CreateLogin = () => {
     password: '',
   });
 
-  const [redirect, setRedirect] = useState(false);
+  const [change, setChange] = useState(false);
   const { brugernavn, fornavn, efternavn, email, password } = payload;
   const handleChange = (e) => {
     setPayload({ ...payload, [e.target.name]: e.target.value });
@@ -21,13 +21,13 @@ const CreateLogin = () => {
     e.preventDefault();
     try {
       // eslint-disable-next-line
-      const res = await API.createLogin('bruger', payload, setRedirect);
+      const res = await API.createLogin('bruger', payload, setChange);
     } catch (err) {
       console.log(err);
     }
   };
 
-  if (redirect) {
+  if (change) {
     return <Redirect to="/login" />;
   }
 

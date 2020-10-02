@@ -9,6 +9,7 @@ const CommentList = ({ currentComments, setReload, ifUser, produktid }) => {
 
   const onDelete = (id) => {
     API.DeleteComment(`/kommentar/admin/${id}`);
+    alert('Comment was deleted');
     setReload(true);
   };
   const EditComment = (state, data, id) => {
@@ -32,6 +33,7 @@ const CommentList = ({ currentComments, setReload, ifUser, produktid }) => {
       alert(err.message);
     }
   };
+
   return (
     <>
       {currentComments

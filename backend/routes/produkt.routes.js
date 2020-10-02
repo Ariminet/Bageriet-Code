@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
   try {
     const produkter = await Produkt.find(
       {},
-      'titel teaser image pris likes kommentar antal tilberedningstid beskrivelse'
+      'titel teaser image pris likes kommentar antal tilberedningstid beskrivelse ingredienser'
     )
       .sort([['title', 1]])
       .populate('kategori'); //.limit(antal); populate('kategori kommentar')

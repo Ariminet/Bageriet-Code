@@ -4,7 +4,7 @@ import API from '../../../API';
 import { LoggedInContext } from '../../../Context/LoggedInContext';
 import './style.scss';
 const AdminNav = () => {
-  const [isAuth] = useContext(LoggedInContext);
+  const [loggedin, setLoggedin] = useContext(LoggedInContext);
   const [redirect, setRedirect] = useState(false);
   const [reload, setReload] = useState(false);
   // eslint-disable-next-line
@@ -32,15 +32,15 @@ const AdminNav = () => {
     setReload(false);
   }, [reload]);
 
-  // useEffect(() => {
-  //   API.setUser(`/bruger/admin/${userID}`, setPayload);
-  // }, [userID]);
-  console.log(payload.email);
+  useEffect(() => {
+    if (userID) {
+      API.setUser(`/bruger/admin/${userID}`, setPayload);
+    }
+  }, [userID]);
 
   const onConfirm = () => {
     if (window.confirm("if you're sure you want to delete press OK")) {
       API.deleteUser(`/bruger/admin/${userID}`, setRedirect);
-      isAuth();
     } else {
       console.log("You've Canceled Your Deletion");
     }
@@ -52,7 +52,6 @@ const AdminNav = () => {
   };
 
   const SubscripeToNewsletter = () => {
-    console.log(payload.email);
     let letter = { email: payload.email };
     // API.tilmeldNewsLetter('/nyhedsbrevtilmelding', payload.email);
     API.tilmeldNewsLetter('/nyhedsbrevtilmelding', letter);
@@ -61,7 +60,7 @@ const AdminNav = () => {
 
   if (redirect) {
     API.getLogout('/login/logout');
-
+    setLoggedin(false);
     return <Redirect to="/" />;
   }
   return (
